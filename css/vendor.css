@@ -2120,7 +2120,6 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 .mejs__horizontal-volume-slider {
-   display: block;
    height: 36px;
    position: relative;
    vertical-align: middle;

@@ -64,6 +64,28 @@
  *
  * =================================================================== */
 
+ /*메인페이지 부분 배경색 문제 해결*/
+
+div.s-content {
+   overflow: hidden;
+   position: relative;
+   width: 100%;
+   height: 300px;
+}
+
+.s-content .t-content {
+   background-color: #f2f2f2;
+   height: 100%;
+   position: absolute;
+   right: 0;
+   top: 0;
+   color: black;
+}
+
+/*writing button*/
+.s-content .writing-btn {
+margin-left: 1250px;
+}
 
 /* ===================================================================
  * # base style overrides
@@ -2872,7 +2894,7 @@ html.no-csstransitions .featured {
  * ------------------------------------------------------------------- */
 .s-content {
    background-color: #f2f2f2;
-   padding-top: 8.4rem;
+   padding-top: 4.4rem;
    padding-bottom: 7.2rem;
 }
 
@@ -4130,87 +4152,3 @@ footer h4::after {
    }
 
 }
-
-
-
-/* ===================================================================
- * # page styles
- *
- * ------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------- 
- * ## contact page
- * ------------------------------------------------------------------- */
-
-/* map
- * ----------------------------------------------- */
-#map-wrap {
-   background: #FFFFFF;
-   z-index: 500;
-   height: 420px;
-}
-
-#map-wrap .gm-style img {
-   max-width: none;
-}
-
-#map-wrap .gm-style label {
-   width: auto;
-   display: inline;
-}
-
-#map-wrap #map-container {
-   height: 100%;
-   width: 100%;
-   background: #DDDDDD;
-   position: relative;
-}
-
-#map-wrap #map-zoom-in, #map-wrap #map-zoom-out {
-   height: 3.2rem;
-   width: 3.2rem;
-   cursor: pointer;
-   margin-right: 4rem;
-   color: white;
-   background-color: #000000;
-   display: none;
-}
-
-#map-wrap #map-zoom-in {
-   margin-bottom: 2px;
-   margin-top: 30px;
-}
-
-#map-wrap #map-zoom-in::before, #map-wrap #map-zoom-out::before {
-   display: block;
-   color: white;
-   text-align: center;
-   font-family: 'FontAwesome';
-   font-size: 14px;
-   content: "\f067";
-   height: 32px;
-   width: 32px;
-   line-height: 32px;
-   -webkit-transition: color 0.3s ease-in-out;
-   transition: color 0.3s ease-in-out;
-}
-
-#map-wrap #map-zoom-in::before {
-   content: "\f067";
-}
-
-#map-wrap #map-zoom-out::before {
-   content: "\f068";
-}
-
-#map-wrap #map-zoom-in:hover::before, #map-wrap #map-zoom-out:hover::before {
-   background-color: #0054a5;
-}
-
-/* contact form
- * ----------------------------------------------- */
-#cForm {
-   margin-top: 3.6rem;
-}
-
-/*# sourceMappingURL=main.css.map */
