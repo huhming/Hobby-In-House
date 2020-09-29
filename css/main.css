@@ -2004,12 +2004,26 @@ body.search-is-visible {
  * ## header search trigger
  * ------------------------------------------------------------------- */
 .header__search-trigger {
+   margin-top: 7px;
    height: 21px;
    min-width: 21px;
    position: absolute;
    right: 20px;
    top: 15px;
    background-image: url(../images/icons/icon-search.svg);
+   background-repeat: no-repeat;
+   background-position: right center;
+   background-size: contain;
+}
+
+.login_icon {
+   margin-right: 125px;
+   height: 30px;
+   min-width: 30px;
+   position: absolute;
+   right: 20px;
+   top: 15px;
+   background-image: url();
    background-repeat: no-repeat;
    background-position: right center;
    background-size: contain;
