@@ -87,6 +87,11 @@ div.s-content {
 margin-left: 1250px;
 }
 
+/*메인페이지 푸터 부분 글씨 색 문제 해결*/
+.s-footer__copyright .text {
+   color: rgba(255, 255, 255, 0.4);
+}
+
 /* ===================================================================
  * # base style overrides
  *
@@ -123,7 +128,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-   color: #0054a5;
+   color: black;
    -webkit-transition: all 0.3s ease-in-out;
    transition: all 0.3s ease-in-out;
 }
