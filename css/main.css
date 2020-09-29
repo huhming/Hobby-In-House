@@ -856,7 +856,7 @@ input[type="button"] {
    text-decoration: none;
    text-align: center;
    white-space: nowrap;
-   border-radius: 3px;
+   border-radius: 5px;
    cursor: pointer;
    -webkit-transition: all 0.3s ease-in-out;
    transition: all 0.3s ease-in-out;
