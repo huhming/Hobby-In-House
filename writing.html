@@ -1,0 +1,59 @@
+<html>
+</<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/font-awesome.css">
+    <link rel="stylesheet" href="style/tempDivStyle.css">
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+    <title></title>
+  </head>
+  <body>
+<?php
+session_start();
+$con=mysqli_connect('localhost','ab5502ghals','ghfkd33*',"ab5502ghals");
+
+$currentnickname=$_SESSION['nickname'];
+
+$sql=mysqli_query($con,"SELECT * FROM accounts WHERE nickname='$currentnickname'");
+$member=mysqli_fetch_array($sql);
+
+if(!($_SESSION['nickname']) ||
+   !($member['usrid']==$_SESSION['userid']) ||
+   !($member['usrpw']==$_SESSION['userpw'])){
+  echo("<script>alert(1);</script>");
+}
+?>
+<!--
+  1.헤더 위에 이상하게 뜨는건 php때문임, 왜 그렇게 되는지는 모르지만 일단 위에꺼 지우면 글귀 사라짐.
+  2.위 php코드는 백엔드와 소통 + 로그인후 본 페이지에 들어갈때 인증을 위해 만들어 놓았던 것임.
+-->
+<script>
+  $(document).ready(function() {
+    $('.summernote').summernote({
+            height: 400,
+            lang: 'ko-KR'
+        });
+  });
+</script>
+<div id="header">해더, (중앙정렬기능있음)</div>
+<div id="mainDiv">
+  <form action="bulletin.php" method="post">
+  Title:
+  <p><input type="text" name="title" placeholder="제목" style="width:450px;"></p><br/>
+  Autor:
+  <p><input type="text" name="author" placeholder="작성자" style="width:450px;"></p><br/>
+  Body:
+  <p><textarea class="summernote" name="contents"></textarea></p>
+  <br><input type="submit" value="작성완료">
+  </form>
+</div>
+  </body>
+</html>
