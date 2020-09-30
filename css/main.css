@@ -92,6 +92,19 @@ margin-left: 1250px;
    color: rgba(255, 255, 255, 0.4);
 }
 
+/*로그인 페이지 글씨 문제 해결*/
+.login-text {
+   color: black;
+}
+.login-btn {
+   font-size: 13px;
+}
+
+/*로그인 페이지 부분 박스 위치 조정*/
+.login-content {
+   padding-left: 680px;
+}
+
 /* ===================================================================
  * # base style overrides
  *
