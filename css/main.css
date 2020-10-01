@@ -66,7 +66,7 @@
 
 /*메인페이지 부분 배경색 문제 해결*/
 
-div.s-content {
+.t-content {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -79,7 +79,6 @@ div.s-content {
   position: absolute;
   right: 0;
   top: 0;
-  color: black;
 }
 
 /*writing button*/
@@ -99,21 +98,59 @@ div.s-content {
 }
 
 /*메인페이지 푸터 부분 글씨 색 문제 해결*/
-.s-footer__copyright .text {
+.s-footer__copyright #text {
   color: rgba(255, 255, 255, 0.4);
 }
 
 /*로그인 페이지 글씨 문제 해결*/
 .login-text {
   color: black;
+  margin-right: 19rem;
 }
 .login-btn {
   font-size: 13px;
+  margin-right: 9rem;
+}
+.sign-btn {
+  margin-right: 19rem;
 }
 
 /*로그인 페이지 부분 박스 위치 조정*/
 .login-content {
-  padding-left: 680px;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: -webkit-center;
+}
+
+/*로그아웃 버튼 none*/
+.none {
+  position: relative;
+  float: right;
+  letter-spacing: 0.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #c5c5c5;
+  border: 0.2rem solid #c5c5c5;
+  padding: 0.3rem;
+  text-align: center;
+  margin-right: 27rem;
+  margin-top: 2rem;
+}
+@media (max-width: 1450px) {
+  .none {
+    position: relative;
+    float: right;
+    letter-spacing: 0.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #c5c5c5;
+    border: 0.2rem solid #c5c5c5;
+    padding: 0.3rem;
+    text-align: center;
+    margin-right: 7rem;
+    margin-top: 2rem;
+  }
 }
 
 /*글 버튼 부분 위치 조정*/
@@ -622,7 +659,7 @@ fieldset {
   margin-bottom: 1.5rem;
 }
 
-input,
+input:not(.none),
 textarea,
 select,
 pre,
@@ -948,7 +985,7 @@ select:-webkit-autofill:focus {
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"]:not(.none) {
   display: inline-block;
   font-family: "metropolis-bold", sans-serif;
   font-size: 1.2rem;
@@ -1884,7 +1921,8 @@ input::-moz-focus-inner {
 }
 
 .s-pageheader--home {
-  padding-top: 240px;
+  padding-top: 23.6rem;
+  margin-top: 19px;
 }
 
 .header {
@@ -3522,7 +3560,6 @@ footer h4::after {
 }
 
 .s-footer__bottom .s-footer__copyright span::after {
-  content: "|";
   display: inline-block;
   padding: 0 1rem 0 1.2rem;
   color: rgba(255, 255, 255, 0.1);

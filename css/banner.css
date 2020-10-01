@@ -1,22 +1,22 @@
 .banner {
-    position: relative;
-    width: 600px; 
-    height: 350px;  
-    margin:0 auto; 
-    padding:0; 
-    overflow: hidden;
+  position: relative;
+  width: 60rem;
+  height: 48rem;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
 }
 
 .banner ul {
-    position: absolute; 
-    margin: 0px; 
-    padding:0; 
-    list-style: none; 
+  position: absolute;
+  margin: 0px;
+  padding: 0;
+  list-style: none;
 }
 .banner ul li {
-    float: left; 
-    width: 600px; 
-    height: 350px; 
-    margin:0; 
-    padding:0;
+  float: left;
+  width: 600px;
+  height: 350px;
+  margin: 0;
+  padding: 0;
 }
