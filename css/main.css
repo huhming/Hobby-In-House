@@ -109,12 +109,19 @@
   color: black;
   margin-right: 19rem;
 }
+.rewrite-text {
+  color: black;
+  margin-right: 25rem;
+}
 .login-btn {
-  font-size: 13px;
+  font-size: 12px;
   margin-right: 9rem;
 }
 .sign-btn {
   margin-right: 19rem;
+}
+.wts-btn {
+  font-size: 14px;
 }
 
 /*로그인 페이지 부분 박스 위치 조정*/

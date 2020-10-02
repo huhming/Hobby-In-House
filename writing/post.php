@@ -21,7 +21,11 @@
               .$member['content'].
               "<br>-----------------------------------------";
 
-
+        if($_SESSION['nickname']==$member['author']){ //글 작성자와 현재 로그인된 사람의 닉네임이 같을 시에만 이 버튼이 보임
+          echo"
+          <button><a href='../post_rewriting.html?postid=".$postid."'>글 수정</a></button>
+          <button><a href='../post_delete.html?postid=".$member['post_id']."'>글 삭제</a></button>
+          ";
         }
-
+      }
 ?>

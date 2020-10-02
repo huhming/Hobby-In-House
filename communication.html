@@ -111,7 +111,7 @@
             </div>
         </div>
         
-        <!--커뮤니케이션용 게시판글-->
+         <!--커뮤니케이션용 게시판글-->
      <?php
 
      $con=mysqli_connect('localhost','ab5502ghals','ghfkd33*',"ab5502ghals");
@@ -124,12 +124,11 @@
           $sql=mysqli_query($con,"SELECT * FROM bulletin");
 
         }
-
-
     ?>
         <div style="position: absolute; right:15%; top:60px">
         </div>
       <div style="width: 80%; margin:0 auto;">
+        <span style="color:black">
         <table class="table table-striped">
           <thead>
             <tr>
@@ -145,19 +144,20 @@
             while($member=mysqli_fetch_array($sql)){
               $postid=$member['post_id'];
               $title=$member['title'];
-  
+              $author=$member['author'];
+              $views=$member['views'];
               echo "<tr>".
                 "<td>"
-                  .$id.
+                  .$postid.
                    "</td>".
-                  "<td><a href='post.php?postid=" .$postid. "'>"
+                  "<td><a href='./writing/post.php?postid=" .$postid. "'>"
                   .$title.
                    "</a></td>".
                    "<td>"
                      .$author.
                     "</td>".
                     "<td>"
-                      .$writtenTime.
+                      ."미구현".
                        "</td>".
                     "<td>"
                       .$views.
@@ -166,23 +166,16 @@
             }
             ?>
             <tr>
-              <td>id</td>
-              <td>title</td>
-              <td>author</td>
-              <td>writtenTime</td>
-              <td>views</td>
-            </tr>
-
-            <tr>
-              <td>a</td>
-              <td>이 부분에 php에서 가져오는 반복문에 DB 이름들 맞춰서 넣으면 될 것 같아여</td>
-              <td>a</td>
-              <td>a</td>
-              <td>a</td>
+              <td>eX_id</td>
+              <td>ex_title</td>
+              <td>ex_author</td>
+              <td>ex_writtenTime</td>
+              <td>ex_views</td>
             </tr>
           </tbody>
 
          </table>
+         </span>
          </div>
 
 

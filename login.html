@@ -95,28 +95,36 @@
   </section> <!-- end s-pageheader -->
 
     <section class="s-content login-content">
-      <?php
-      if($_SESSION['userid']){
-        echo'<script>alert("이미 로그인되어 있습니다!");</script>
-                <br>
-                <script>
-                function move_out(){
-                  location.href="logout.html"
-                }//onclick안에 따옴표가 들어가질 못해 함수 이용.
-                </script>
-                ';
-      }else{
-        echo'
-            <h1 class="login-text">LOGIN</h1>
-           <form action="login.php" method="POST">
+        <?php
+        if($_SESSION['userid']){
+          $string='Nanum Myeongjo';
+          echo'<script>alert("이미 로그인되어 있습니다!");</script>
+                  <br>
+                  <script>
+                  function move_out(){
+                    location.href="logout.html"
+                  }//onclick안에 따옴표가 들어가질 못해 함수 이용.
+                  </script>
+                 ';
+        }else{
+          $string='Noto Serif KR';
+          
+          echo'
+          <script>
+          function submit(){
+            document.documentElementById("login_info").submit();
+          }
+          </script>
+              <h1 class="login-text">LOGIN</h1>
+          <form id="login_info" action="./login/login.php" method="POST">
               <input type="text" name="inputid" placeholder="id" style="padding-right: 150px;"><br>
               <input type="password" name="inputpw" placeholder="password" style="padding-right: 150px;"><br>
-              <button type="button" style="font-family: 'Noto Serif KR', serif;">로그인</button>
+              <button type="button" style="font-family: 'Noto Serif KR', serif;" onclick="submit();">로그인</button>
               <button class="login-btn" type="button" style="font-family: 'Noto Serif KR', serif;"><a href="sign_up.html">회원가입</a></button>
-           </form>';
-      }
-      ?>
-    </section> <!-- s-content -->
+          </form>';
+        }
+        ?>
+      </section> <!-- s-content -->
 
     <!-- s-footer
     ================================================== -->

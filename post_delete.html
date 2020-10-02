@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+<?php
+$con=mysqli_connect('localhost','ab5502ghals','ghfkd33*',"ab5502ghals");
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }else{
+	  $postid=$_GET['postid'];
+$sql="delete from bulletin where post_id='$postid'";
+$result=mysqli_query($con, $sql);
+
+if($result===false){
+	                echo '저장하는 과정에서 문제가 생겼습니다. 관리자에게 문의해주세요';
+			                error_log(mysqli_error($conn));
+			                echo mysqli_error($conn);
+}
+else{
+	echo '<script>alert("삭제됐습니다.")</script>';
+}
+	echo "<script>location='communication.html'</script>";
+
+}
+	?>
+	</body>
+</html>
