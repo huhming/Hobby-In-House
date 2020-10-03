@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Hobby In House</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!--css부분 추가-->
+    <style>
+        .imagess { 
+            text-align: center; 
+            }
+    </style>
+
+
+
+    <!--js부분 추가-->
+    <script type="text/javascript">
+        function button_event(){
+        if (confirm("정말 삭제하시겠습니까?") == true)
+            document.form.submit();
+        else{
+            return;}
+        }
+    </script>
+
+
+</head>
+
+<body id="top">
+
+    <!-- pageheader
+    ================================================== -->
+    <section class="s-pageheader s-pageheader--home">
+
+        <header class="header">
+            <div class="header__content row">
+
+                <div class="header__logo">
+                    <a class="logo" href="index.html">
+                        <h1>Hobby In House.</h1>
+                </div> <!-- end header__logo -->
+
+                <a class="login" href="login.html">
+                    <img src="images/login.png" alt="no_image" class="login_icon">
+                </a>
+
+                <a class="header__search-trigger" href="#0"></a>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="search-submit" value="Search">
+                    </form>
+        
+                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+                <nav class="header__nav-wrap">
+
+                    <h2 class="header__nav-heading h6">Site Navigation</h2>
+
+                    <ul class="header__nav">
+                        <li class="current"><a href="index.html" title="">Home</a></li>
+                        <li><a href="baking.html">Baking</a></li>
+                        <li><a href="cooking.html">Cooking</a></li>
+                        <li><a href="craft.html">Craft</a></li>
+                        <li><a href="game.html">Game</a></li>
+                        <li><a href="home-training.html">Home-Training</a></li>
+                        <li><a href="psychological-test.html">Psychological-test</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                    </ul> <!-- end header__nav -->
+
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+                </nav> <!-- end header__nav-wrap -->
+
+            </div> <!-- header-content -->
+        </header> <!-- header -->
+    </section> <!-- end s-pageheader -->
+
+
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content s-content--narrow">
+        <!--버튼 부분-->
+        <div class="various-btn">
+          <br />
+          <input
+            id="list"
+            type="button"
+            value="목록"
+            onclick="location.href='game.html'"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <!--수정,삭제는 내가 쓴 글일 경우 ,클릭시 이동하는거 확인해주세욤-->
+          <input
+            id="remove"
+            type="button"
+            value="삭제"
+            onclick="button_event();"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <input
+            id="modify"
+            type="button"
+            value="수정"
+            onclick="location.href=''"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <!--글작성하는 페이지 비워놔써-->
+          <br /><br /><br />
+        </div>
+
+
+
+
+        <article class="row format-standard">
+
+            <div class="s-content__header col-full">
+                <h1 class="s-content__header-title">
+                    미니 팬케이크 만들기
+                </h1>
+                <ul class="s-content__header-meta">
+                    <li class="date">September 15, 2020</li>
+                    <li class="cat">
+                        In
+                        <a href="#0">Baking</a>
+                    </li>
+                    <li class="hits">조회수: 115</li>
+                </ul>
+            </div> <!-- end s-content__header -->
+    
+
+            <div class="col-full s-content__main">
+                <div class="imagess">
+                    <h4>오늘은 미니 팬케이크 레시피&꿀팁에 대해 알아봅시다!</h4><br>
+            
+                <img src="images/baking/bk3_1.jpg" alt="" width="500" height="500px">
+                <br><p>1. 재료: 핫케이크 믹스 가루 250g, 우유 200ml 또는 물 140ml, 계란 1개</p>
+                <br><br>
+                <img src="images/baking/bk3_2.jpg" alt="" width="500" height="500px">
+                <br><p>2. 핫케이크 믹스 가루와 우유, 계란을 큰 볼에 넣어 함께 섞어줍니다. (우유가 없으시면 물을 넣으셔도 됩니다.)</p>
+                <br><br>
+                <img src="images/baking/bk3_3.jpg" alt="" width="500" height="500px">
+                <br><p>3. 가루가 덩어리가 없도록 섞어줍니다. 너무 오래 저으면 핫케이크가 질겨질 수 있으니 주의하셔야합니다!</p>
+                <br><br>
+                <img src="images/baking/bk3_4.jpg" alt="" width="500" height="500px">
+                <br><p>4. 약한 불로 예열해 주시고 예열된 프라이팬에 기름을 살짝 둘러 키친타월로 한번 닦아줍니다.</p>
+                <br><br>
+                <img src="images/baking/bk3_5.jpg" alt="" width="500" height="500px">
+                <br><p>5. 집에 짤 쭈머니나 소스 용기가 없으신 분들은 숟가락으로 반죽을 동글게 올려주시면 됩니다. (모양이 약간 안이쁠 수도 있습니다 ㅜㅜ)</p>
+                <br><br>
+                <img src="images/baking/bk3_6.jpg" alt="" width="500" height="500px">
+                <br><p>6. 약한 불에서 굽다가 표면에 보글보글 기포가 생기면 뒤집어줍니다. (불이 너무 세면 탈 수 있습니다.)</p>
+                <br><br>
+                <img src="images/baking/bk3_7.jpg" alt="" width="500" height="500px">
+                <br><p>7. 귀염뽀짝한 미니 팬케이크 완성!!!</p>
+                <br><br>
+                <h6>*더 맛있게 먹는 방법*</h6>
+                <br><p>버터와 팬케이크 시럽과 같이 먹으면 JMT</p>
+                <br><p>시리얼 같이 우유에 넣어 먹거나, 요거트볼처럼 요거트와 같이 먹어도 더욱 맛있습니다!</p>
+                <br><br>
+
+                </div>
+            </div> <!-- end s-content__main -->
+
+        </article>
+
+
+
+        <!--댓글 창  css부분 수정 필요!-->
+        <br><br><br><br>
+        <blockquote style="text-align:center;"><p>댓글</p></blockquote>
+        <input type="hidden" id="board_id" name="board_id" value="${boardView.id}" />
+        <div align="center">
+            </br>
+            </br>
+            <table border="1" width="900px" id="reply_area" class="recomment">
+                <tr reply_type="all"><!-- 뒤에 댓글 붙이기 쉽게 선언 -->
+                    <td colspan="5"></td>
+                </tr>
+                <!-- 댓글이 들어갈 공간 -->
+            </table>
+            <table border="1" width="900px" bordercolor="#46AA46" class="comment">
+                <tr>
+                    <td width="500px">
+                        이름: <input type="text" id="reply_writer" name="reply_writer" style="width:170px; background-color: #eee;" maxlength="10" placeholder="작성자"/>
+                        패스워드: <input type="password" id="reply_password" name="reply_password" style="width:170px; background-color: #eee;" maxlength="10" placeholder="패스워드"/>
+                        <button id="reply_save" name="reply_save">댓글 등록</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="reply_content" name="reply_content" rows="4" cols="50" placeholder="댓글을 입력하세요." style="background-color: #eee;"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br><br><br>
+
+
+        
+    </section> <!-- s-content -->
+
+
+
+    <!-- s-footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>Contributor<br>
+                            김률아 hobby0519@gmail.com<br>
+                            김민겸 gms08184@gmail.com<br>  
+                            박준희 qaz74792@gmail.com<br>
+                            심성현 sh010604@naver.com<br>
+                            전명환 ab5502ghals@naver.com<br>
+                            허미림 wowoo3545@gmail.com</span><br>
+                        <span>© Copyright Hobby In House 2020</span>
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+
+    </footer> <!-- end s-footer -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
+
+</body>
+
+</html>

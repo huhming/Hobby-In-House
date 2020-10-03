@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Hobby In House</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!--css부분 추가-->
+    <style>
+        .imagess { 
+            text-align: center; 
+            }
+    </style>
+
+    <!--js부분 추가-->
+    <script type="text/javascript">
+        function button_event(){
+        if (confirm("정말 삭제하시겠습니까?") == true)
+            document.form.submit();
+        else{
+            return;}
+        }
+    </script>
+
+
+</head>
+
+<body id="top">
+
+    <!-- pageheader
+    ================================================== -->
+    <section class="s-pageheader s-pageheader--home">
+
+        <header class="header">
+            <div class="header__content row">
+
+                <div class="header__logo">
+                    <a class="logo" href="index.html">
+                        <h1>Hobby In House.</h1>
+                </div> <!-- end header__logo -->
+
+                <a class="login" href="login.html">
+                    <img src="images/login.png" alt="no_image" class="login_icon">
+                </a>
+
+                <a class="header__search-trigger" href="#0"></a>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="search-submit" value="Search">
+                    </form>
+        
+                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+                <nav class="header__nav-wrap">
+
+                    <h2 class="header__nav-heading h6">Site Navigation</h2>
+
+                    <ul class="header__nav">
+                        <li class="current"><a href="index.html" title="">Home</a></li>
+                        <li><a href="baking.html">Baking</a></li>
+                        <li><a href="cooking.html">Cooking</a></li>
+                        <li><a href="craft.html">Craft</a></li>
+                        <li><a href="game.html">Game</a></li>
+                        <li><a href="home-training.html">Home-Training</a></li>
+                        <li><a href="psychological-test.html">Psychological-test</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                    </ul> <!-- end header__nav -->
+
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+                </nav> <!-- end header__nav-wrap -->
+
+            </div> <!-- header-content -->
+        </header> <!-- header -->
+    </section> <!-- end s-pageheader -->
+
+
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content s-content--narrow">
+        <!--버튼 부분-->
+        <div class="various-btn">
+          <br />
+          <input
+            id="list"
+            type="button"
+            value="목록"
+            onclick="location.href='game.html'"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <!--수정,삭제는 내가 쓴 글일 경우 ,클릭시 이동하는거 확인해주세욤-->
+          <input
+            id="remove"
+            type="button"
+            value="삭제"
+            onclick="button_event();"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <input
+            id="modify"
+            type="button"
+            value="수정"
+            onclick="location.href=''"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <!--글작성하는 페이지 비워놔써-->
+          <br /><br /><br />
+        </div>
+
+
+
+
+
+        <article class="row format-standard">
+
+            <div class="s-content__header col-full">
+                <h1 class="s-content__header-title">
+                    채끝 짜파구리
+                </h1>
+                <ul class="s-content__header-meta">
+                    <li class="date">September 7, 2020</li>
+                    <li class="cat">
+                        In
+                        <a href="#0">Cooking</a>
+                    </li>
+                    <li class="hits">조회수: 98</li>
+                </ul>
+            </div> <!-- end s-content__header -->
+    
+
+            <div class="col-full s-content__main">
+                <div class="imagess">
+                    <h4>오늘은 영화 '기생충'에 나왔던 채끝 짜파구리 레시피&꿀팁에 대해 알아봅시다!</h4><br>
+                   
+                <img src="images/cooking/ck3_1.jpg" alt="" width="500" height="500px">
+                <br><p>1. 재료(2인분): 너구리 1봉, 짜파게티 1봉, 채끝살(스테이크용)250g, 양파 1/4개, 대파 1/2대, 올리브유 약간 
+                    <br> 스테이크 밑간 재료: 올리브유 1큰술, 소금 약간, 후춧가루 약간
+                </p>
+                <br><br>
+                <img src="images/cooking/ck3_2.jpg" alt="" width="500" height="500px">
+                <br><p>2. 채끝살은 키친타올에 올려 핏물을 제거하고, 한 입 크기로 자른 후 밑간 재료를 넣어 5분 정도 재워줍니다.</p>
+                <br><br>
+                <img src="images/cooking/ck3_3.jpg" alt="" width="500" height="500px">
+                <br><p>3. 달군 팬에 올리브유를 두른 후 쇠고기를 올려 센 불에서 앞 뒤로 노릇하게 구워줍니다.</p>
+                <br><br>
+                <img src="images/cooking/ck3_4.jpg" alt="" width="500" height="500px">
+                <br><p>4. 양파는 채썰고, 대파는 어슷 썰어줍니다.</p>
+                <br><br>
+                <img src="images/cooking/ck3_5.jpg" alt="" width="500" height="500px">
+                <br><p>5. 고기를 구웠던 달군 팬에 올리브유를 두른 후 대파와 양파를 볶습니다.</p>
+                <br><br>
+                <img src="images/cooking/ck3_6.jpg" alt="" width="500" height="500px">
+                <br><p>6. 끓는 물에 후레이크와 라면 면을 넣고 3~4분 정도 삶아 체에 밭쳐 물기를 빼줍니다.(면수는 따로 준비해주세요)</p>
+                <br><br>
+                <img src="images/cooking/ck3_7.jpg" alt="" width="500" height="500px">
+                <br><p>7. 6번과정에 면과 짜파게티 수프 1봉, 너구리 수프 2/3봉을 넣고 면수 1/2컵을 넣고 볶아줍니다. 그 후 구운 고기를 넣어 가볍게 섞어줍니다.</p>
+                <br><br>
+                <img src="images/cooking/ck3_cover.PNG" alt="" width="500" height="500px">
+                <br><p>8. 보기만해도 먹음직스럽게 보이는, 군침 돋는 채끝 짜파게티 완성!</p>
+                <br><br>
+                <h6>*꿀팁*</h6>
+                <br><p>취향에 따라 채 썬 오이와 쪽파, 달걀 등을 곁들여 먹어도 좋아요!</p>
+                <br><p>이쁜 그릇에 담은 후 맛있게 먹는 순간 영화 '기생충' 한편을 찍는 듯한 느낌을 받을 수 있다는 점!!</p>
+                <br><br>
+              
+
+                </div>
+            </div> <!-- end s-content__main -->
+
+        </article>
+
+
+
+        <!--댓글 창  css부분 수정 필요!-->
+        <br><br><br><br>
+        <blockquote style="text-align:center;"><p>댓글</p></blockquote>
+        <input type="hidden" id="board_id" name="board_id" value="${boardView.id}" />
+        <div align="center">
+            </br>
+            </br>
+            <table border="1" width="900px" id="reply_area" class="recomment">
+                <tr reply_type="all"><!-- 뒤에 댓글 붙이기 쉽게 선언 -->
+                    <td colspan="5"></td>
+                </tr>
+                <!-- 댓글이 들어갈 공간 -->
+            </table>
+            <table border="1" width="900px" bordercolor="#46AA46" class="comment">
+                <tr>
+                    <td width="500px">
+                        이름: <input type="text" id="reply_writer" name="reply_writer" style="width:170px; background-color: #eee;" maxlength="10" placeholder="작성자"/>
+                        패스워드: <input type="password" id="reply_password" name="reply_password" style="width:170px; background-color: #eee;" maxlength="10" placeholder="패스워드"/>
+                        <button id="reply_save" name="reply_save">댓글 등록</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="reply_content" name="reply_content" rows="4" cols="50" placeholder="댓글을 입력하세요." style="background-color: #eee;"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br><br><br>
+
+
+        
+    </section> <!-- s-content -->
+
+
+
+    <!-- s-footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>Contributor<br>
+                            김률아 hobby0519@gmail.com<br>
+                            김민겸 gms08184@gmail.com<br>  
+                            박준희 qaz74792@gmail.com<br>
+                            심성현 sh010604@naver.com<br>
+                            전명환 ab5502ghals@naver.com<br>
+                            허미림 wowoo3545@gmail.com</span><br>
+                        <span>© Copyright Hobby In House 2020</span>
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+
+    </footer> <!-- end s-footer -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
+
+</body>
+
+</html>

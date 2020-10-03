@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Hobby In House</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <!--css부분 추가-->
+    <style>
+        .imagess {
+             text-align: center;
+        }
+    </style>
+
+
+    <!--js부분 추가-->
+    <script type="text/javascript">
+        function button_event(){
+        if (confirm("정말 삭제하시겠습니까?") == true)
+            document.form.submit();
+        else{
+            return;}
+        }
+    </script>
+
+
+</head>
+
+<body id="top">
+
+    <!-- pageheader
+    ================================================== -->
+    <section class="s-pageheader s-pageheader--home">
+
+        <header class="header">
+            <div class="header__content row">
+
+                <div class="header__logo">
+                    <a class="logo" href="index.html">
+                        <h1>Hobby In House.</h1>
+                </div> <!-- end header__logo -->
+
+                <a class="login" href="login.html">
+                    <img src="images/login.png" alt="no_image" class="login_icon">
+                </a>
+
+                <a class="header__search-trigger" href="#0"></a>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="search-submit" value="Search">
+                    </form>
+        
+                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+                <nav class="header__nav-wrap">
+
+                    <h2 class="header__nav-heading h6">Site Navigation</h2>
+
+                    <ul class="header__nav">
+                        <li class="current"><a href="index.html" title="">Home</a></li>
+                        <li><a href="baking.html">Baking</a></li>
+                        <li><a href="cooking.html">Cooking</a></li>
+                        <li><a href="craft.html">Craft</a></li>
+                        <li><a href="game.html">Game</a></li>
+                        <li><a href="home-training.html">Home-Training</a></li>
+                        <li><a href="psychological-test.html">Psychological-test</a></li>
+                        <li><a href="communication.html">Communication</a></li>
+                    </ul> <!-- end header__nav -->
+
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+                </nav> <!-- end header__nav-wrap -->
+
+            </div> <!-- header-content -->
+        </header> <!-- header -->
+    </section> <!-- end s-pageheader -->
+
+
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content s-content--narrow">
+        <!--버튼 부분-->
+        <div class="various-btn">
+          <br />
+          <input
+            id="list"
+            type="button"
+            value="목록"
+            onclick="location.href='game.html'"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <!--수정,삭제는 내가 쓴 글일 경우 ,클릭시 이동하는거 확인해주세욤-->
+          <input
+            id="remove"
+            type="button"
+            value="삭제"
+            onclick="button_event();"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <input
+            id="modify"
+            type="button"
+            value="수정"
+            onclick="location.href=''"
+            style="font-family: 'Noto Serif KR', serif"
+          />
+          <!--글작성하는 페이지 비워놔써-->
+          <br /><br /><br />
+        </div>
+
+
+
+
+
+        <article class="row format-standard">
+
+            <div class="s-content__header col-full">
+                
+                <h1 class="s-content__header-title">
+                    비즈 만들기
+                </h1>
+                <ul class="s-content__header-meta">
+                    <li class="date">September 7, 2020</li>
+                    <li class="cat">
+                        In
+                        <a href="#0">Craft</a>
+                    </li>
+                    <li class="hits">조회수: 103</li>
+                </ul>
+            </div> <!-- end s-content__header -->
+    
+
+            <div class="col-full s-content__main">
+                <div class="imagess">
+                    <h4>오늘은 비즈 만들기 방법&꿀팁에 대해 알아봅시다!</h4><br>
+                   
+                <img src="images/craft/cr3_1.jpg" alt="" width="500" height="500px">
+                <br><p>1. 준비물: 우레탄 줄, 순간접착제, 비즈(자유), 가위 </p>
+                <br><br>
+                <img src="images/craft/cr3_2.jpg" alt="" width="500" height="500px">
+                <br><p>2. 비즈는 2~3mm의 아주 작은 크기라 그릇 등을 활용해 일정량을 덜어서 사용합니다.</p>
+                <br><br>
+                <img src="images/craft/cr3_3.jpg" alt="" width="500" height="500px">
+                <br><p>3. 자신의 손가락, 손목보다 길게 우레탄 줄을 자릅니다.
+                    <br>4. 중심을 정하고 비즈를 끼웁니다.(취향) 
+                    <br>*손가락, 손목 둘레에 맞춰가며 끼우세요!*
+                    <br>5. 안 떨어지게 조심하며 우레탄 줄의 양 끝을 잡습니다.
+                    <br>6. 일반적인 매듭으로 2~3번 묶어줍니다. 
+                    <br>7. 매듭을 꽈-악 묶고 그 부분에 순간접착제를 극소량 발라줍니다.
+                    <br>8. 잠시 말린 후 남는 줄을 잘라줍니다.
+                </p>
+                <br><br>
+                <img src="images/craft/cr3_4.jpg" alt="" width="500" height="500px">
+                <br><p>9. *주의할 점*
+                    <br> 강력 순간 접착제는 한번 붙이면 되돌릴 수 없으니 신중하게 사용하세요! 그리고 신체에 닿으면 절대 안됩니다!!
+                </p>
+                <br><br>
+                <img src="images/craft/cr3_5.jpg" alt="" width="500" height="500px">
+                <br>
+                <img src="images/craft/cr3_cover.PNG" alt="" width="500" height="500px">
+                <br><p>10. 이쁜 비즈 반지, 팔찌 완성!</p>
+                <br><br>
+                <h6>설명이 더 필요한 부분은 아래 영상 참고!</h6>
+                <br><br><p>비즈반지 만들기(쉬운 버전)</p>
+                <br><iframe width="485" height="270" src="https://www.youtube.com/embed/_UmZD3TPcm8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br><p>"꽃모양 늘어나지않는"꽃비즈반지 만들기</p>
+                <br><iframe width="485" height="270" src="https://www.youtube.com/embed/sCrFzxAR138" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br><p>우레탄줄 마감방법</p>
+                <br><iframe width="485" height="270" src="https://www.youtube.com/embed/QckxjXxFifU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br><br><br><br>
+
+                <h6>*꿀팁&후기*</h6>
+                <br>
+                <br> <p>자신이 직접 만든 반지와 팔찌를 악세사리로 쓰고, 친구들에게 선물 할 수도 있어서 보람찬 취미생활이다~! </p>
+                <br><br>
+              
+
+                </div>
+            </div> <!-- end s-content__main -->
+
+        </article>
+
+
+
+        <!--댓글 창  css부분 수정 필요!-->
+        <br><br><br><br>
+        <blockquote style="text-align:center;"><p>댓글</p></blockquote>
+        <input type="hidden" id="board_id" name="board_id" value="${boardView.id}" />
+        <div align="center">
+            </br>
+            </br>
+            <table border="1" width="900px" id="reply_area" class="recomment">
+                <tr reply_type="all"><!-- 뒤에 댓글 붙이기 쉽게 선언 -->
+                    <td colspan="5"></td>
+                </tr>
+                <!-- 댓글이 들어갈 공간 -->
+            </table>
+            <table border="1" width="900px" bordercolor="#46AA46" class="comment">
+                <tr>
+                    <td width="500px">
+                        이름: <input type="text" id="reply_writer" name="reply_writer" style="width:170px; background-color: #eee;" maxlength="10" placeholder="작성자"/>
+                        패스워드: <input type="password" id="reply_password" name="reply_password" style="width:170px; background-color: #eee;" maxlength="10" placeholder="패스워드"/>
+                        <button id="reply_save" name="reply_save">댓글 등록</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="reply_content" name="reply_content" rows="4" cols="50" placeholder="댓글을 입력하세요." style="background-color: #eee;"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br><br><br>
+
+
+        
+    </section> <!-- s-content -->
+
+
+
+    <!-- s-footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>Contributor<br>
+                            김률아 hobby0519@gmail.com<br>
+                            김민겸 gms08184@gmail.com<br>  
+                            박준희 qaz74792@gmail.com<br>
+                            심성현 sh010604@naver.com<br>
+                            전명환 ab5502ghals@naver.com<br>
+                            허미림 wowoo3545@gmail.com</span><br>
+                        <span>© Copyright Hobby In House 2020</span>
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+
+    </footer> <!-- end s-footer -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
+
+</body>
+
+</html>
