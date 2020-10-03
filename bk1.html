@@ -34,6 +34,8 @@
     </style>
 
 
+
+
     <!--js부분 추가-->
     <script type="text/javascript">
         function button_event(){
@@ -42,6 +44,14 @@
         else{
             return;}
         }
+
+        function scrap(){
+            var str = "위 게시물이 스크랩되었습니다.  스크랩한 게시물로 이동하시겠습니까?";
+           
+            if(confirm(str)== true)
+                location.href="new-scrap.html";
+        }
+
     </script>
 
 
@@ -60,6 +70,10 @@
                     <a class="logo" href="index.html">
                         <h1>Hobby In House.</h1>
                 </div> <!-- end header__logo -->
+
+                <a class="scrap" href="scrap.html">
+                    <img src="images/scrap.png" alt="no_image" class="scrap_icon">
+                </a>
 
                 <a class="login" href="login.html">
                     <img src="images/login.png" alt="no_image" class="login_icon">
@@ -121,6 +135,13 @@
           value="목록"
           onclick="location.href='baking.html'"
           style="font-family: 'Noto Serif KR', serif"
+        />
+        <input 
+            class="scrap" 
+            type="button" 
+            value="스크랩" 
+            onclick="scrap();" 
+            style="font-family: 'Noto Serif KR', serif;"
         />
         <!--수정,삭제는 내가 쓴 글일 경우 ,클릭시 이동하는거 확인해주세욤-->
         <input

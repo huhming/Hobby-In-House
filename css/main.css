@@ -2187,6 +2187,19 @@ body.search-is-visible {
   background-size: contain;
 }
 
+.scrap_icon {
+  margin-right: 125px;
+  height: 30px;
+  min-width: 30px;
+  position: absolute;
+  right: 78px;
+  top: 15px;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+
 .header__search-trigger::before {
   font-family: "metropolis-semibold", sans-serif;
   font-size: 12px;
