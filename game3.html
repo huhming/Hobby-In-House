@@ -255,30 +255,24 @@
 
 
 
-        <!--댓글 창  css부분 수정 필요!-->
+        <<!--댓글 창  css부분 수정 필요!-->
         <br><br><br><br>
-        <blockquote style="text-align:center;"><p>댓글</p></blockquote>
+        <h3 style="text-align:center;">댓글</h3>
         <input type="hidden" id="board_id" name="board_id" value="${boardView.id}" />
-        <div align="center">
-            </br>
-            </br>
+        <div style="margin-left: 50px; margin-right: 50px;">
             <table border="1" width="900px" id="reply_area" class="recomment">
                 <tr reply_type="all"><!-- 뒤에 댓글 붙이기 쉽게 선언 -->
                     <td colspan="5"></td>
                 </tr>
                 <!-- 댓글이 들어갈 공간 -->
             </table>
-            <table border="1" width="900px" bordercolor="#46AA46" class="comment">
+            <table width="900px" bordercolor="#46AA46" class="comment">
                 <tr>
-                    <td width="500px">
+                    <td id="Tbox" width="500px">
                         이름: <input type="text" id="reply_writer" name="reply_writer" style="width:170px; background-color: #eee;" maxlength="10" placeholder="작성자"/>
                         패스워드: <input type="password" id="reply_password" name="reply_password" style="width:170px; background-color: #eee;" maxlength="10" placeholder="패스워드"/>
-                        <button id="reply_save" name="reply_save">댓글 등록</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <textarea id="reply_content" name="reply_content" rows="4" cols="50" placeholder="댓글을 입력하세요." style="background-color: #eee;"></textarea>
+                        <button id="reply_save"  name="reply_save" style="font-family: 'Noto Serif KR', serif">댓글 등록</button>
                     </td>
                 </tr>
             </table>
