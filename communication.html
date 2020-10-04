@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
+
 <head>
 
     <!--- basic page needs
@@ -57,14 +58,15 @@
                     <form role="search" method="get" class="header__search-form" action="#">
                         <label>
                             <span class="hide-content">Search for:</span>
-                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s"
+                                title="Search for:" autocomplete="off">
                         </label>
                         <input type="submit" class="search-submit" value="Search">
                     </form>
-        
+
                     <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
 
-                </div>  <!-- end header__search -->
+                </div> <!-- end header__search -->
 
 
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
@@ -98,7 +100,7 @@
     <section class="s-content">
 
         <div class="writingPage">
-        <button class="writing-btn" type="button"><a href="writing.html">WRITING</a></button>
+            <button class="writing-btn" type="button"><a href="writing.html">WRITING</a></button>
         </div>
 
         <div class="row narrow">
@@ -114,9 +116,9 @@
 
             </div>
         </div>
-        
-         <!--커뮤니케이션용 게시판글-->
-     <?php
+
+        <!--커뮤니케이션용 게시판글-->
+        <?php
 
      $con=mysqli_connect('localhost','ab5502ghals','ghfkd33*',"ab5502ghals");
      //checking connection
@@ -131,20 +133,20 @@
     ?>
         <div style="position: absolute; right:15%; top:60px">
         </div>
-      <div style="width: 80%; margin:0 auto;">
-        <span style="color:black">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>번호</th>
-              <th>제목</th>
-              <th>작성자</th>
-              <th>작성 시간</th>
-              <th>조회수</th>
-            </tr> 
-          </thead>
-          <tbody>
-            <?php
+        <div style="width: 80%; margin:0 auto;">
+            <span style="color:black">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성 시간</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
             while($member=mysqli_fetch_array($sql)){
               $postid=$member['post_id'];
               $title=$member['title'];
@@ -154,7 +156,7 @@
                 "<td>"
                   .$postid.
                    "</td>".
-                  "<td><a href='./writing/post.php?postid=" .$postid. "'>"
+                  "<td><a href='./writing/post.html?postid=" .$postid. "'>"
                   .$title.
                    "</a></td>".
                    "<td>"
@@ -169,18 +171,18 @@
                    "</tr>";
             }
             ?>
-            <tr>
-              <td>eX_id</td>
-              <td>ex_title</td>
-              <td>ex_author</td>
-              <td>ex_writtenTime</td>
-              <td>ex_views</td>
-            </tr>
-          </tbody>
+                        <tr>
+                            <td>eX_id</td>
+                            <td>ex_title</td>
+                            <td>ex_author</td>
+                            <td>ex_writtenTime</td>
+                            <td>ex_views</td>
+                        </tr>
+                    </tbody>
 
-         </table>
-         </span>
-         </div>
+                </table>
+            </span>
+        </div>
 
 
         <!--밑에 숫자 부분-->
@@ -214,13 +216,13 @@
                 <div class="col-full">
                     <div class="s-footer__copyright">
                         <span>Contributor<br>
-                             김률아 hobby0519@gmail.com<br>
-                             김민겸 gms08184@gmail.com<br> 
-                             박준희 qaz74792@gmail.com<br>
-                             심성현 sh970627@gmail.com<br> 
-                             전명환 ab5502ghals@naver.com<br>
-                             허미림 wowoo3545@gmail.com</span><br>
-                        <span>© Copyright Hobby In House 2020</span> 
+                            김률아 hobby0519@gmail.com<br>
+                            김민겸 gms08184@gmail.com<br>
+                            박준희 qaz74792@gmail.com<br>
+                            심성현 sh970627@gmail.com<br>
+                            전명환 ab5502ghals@naver.com<br>
+                            허미림 wowoo3545@gmail.com</span><br>
+                        <span>© Copyright Hobby In House 2020</span>
                     </div>
 
                     <div class="go-top">

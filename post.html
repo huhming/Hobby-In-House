@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+
+  <!--- basic page needs
+    ================================================== -->
+  <meta charset="utf-8">
+  <title>Hobby In House</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- mobile specific metas
+    ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+    ================================================== -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/post.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+
+  <!-- script
+    ================================================== -->
+  <script src="js/modernizr.js"></script>
+  <script src="js/pace.min.js"></script>
+
+  <!--css부분 추가-->
+  <style>
+    .imagess {
+      text-align: center;
+    }
+  </style>
+
+  <!--js부분 추가-->
+  <script type="text/javascript">
+    function button_event() {
+      if (confirm("정말 삭제하시겠습니까?") == true)
+        document.form.submit();
+      else {
+        return;
+      }
+    }
+
+    function scrap() {
+      var str = "위 게시물이 스크랩되었습니다.  스크랩한 게시물로 이동하시겠습니까?";
+
+      if (confirm(str) == true)
+        location.href = "new-scrap.html";
+    }
+
+  </script>
+
+</head>
+
+<body id="top">
+
+  <!-- pageheader
+    ================================================== -->
+  <section class="s-pageheader s-pageheader--home">
+
+    <header class="header">
+      <div class="header__content row">
+
+        <div class="header__logo">
+          <a class="logo" href="index.html">
+            <h1>Hobby In House.</h1>
+        </div> <!-- end header__logo -->
+
+        <a class="scrap" href="scrap.html">
+          <img src="images/scrap.png" alt="no_image" class="scrap_icon">
+        </a>
+
+        <a class="login" href="login.html">
+          <img src="images/login.png" alt="no_image" class="login_icon">
+        </a>
+
+        <a class="header__search-trigger" href="#0"></a>
+
+        <div class="header__search">
+
+          <form role="search" method="get" class="header__search-form" action="#">
+            <label>
+              <span class="hide-content">Search for:</span>
+              <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s"
+                title="Search for:" autocomplete="off">
+            </label>
+            <input type="submit" class="search-submit" value="Search">
+          </form>
+
+          <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+        </div> <!-- end header__search -->
+
+
+        <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+        <nav class="header__nav-wrap">
+
+          <h2 class="header__nav-heading h6">Site Navigation</h2>
+
+          <ul class="header__nav">
+            <li class="current"><a href="index.html" title="">Home</a></li>
+            <li><a href="baking.html">Baking</a></li>
+            <li><a href="cooking.html">Cooking</a></li>
+            <li><a href="craft.html">Craft</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="home-training.html">Home-Training</a></li>
+            <li><a href="psychological-test.html">Psychological-test</a></li>
+            <li><a href="communication.html">Communication</a></li>
+          </ul> <!-- end header__nav -->
+
+          <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+        </nav> <!-- end header__nav-wrap -->
+
+      </div> <!-- header-content -->
+    </header> <!-- header -->
+  </section> <!-- end s-pageheader -->
+
+  <!-- s-content
+    ================================================== -->
+  <section class="s-content s-content--narrow">
+
+    <!--버튼 부분-->
+    <div class="various-btn">
+      <br />
+      <?php
+      echo'
+      </div>
+        <article class="row format-standard">
+      <div class="s-content__header col-full">
+        ';
+
+      session_start();     //session 사용하기 위해 필수
+
+      $con=mysqli_connect('localhost','ab5502ghals','ghfkd33*',"ab5502ghals");
+      //checking connection
+          if (mysqli_connect_errno())
+            {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }else{
+              $postid=$_GET['postid'];
+              $postid=$member['post_id'];
+              $sql=mysqli_query($con,"SELECT * FROM bulletin WHERE post_id='$postid'");
+              $member=mysqli_fetch_array($sql);
+
+              if($_SESSION['nickname']==$member['author']){ //글 작성자와 현재 로그인된 사람의 닉네임이 같을 시에만 이 버튼이 보임
+                echo"
+                <button id='modify' ><a href='../post_rewriting.html?postid=".$postid."'>수정</a></button>
+                <button id='remove' ><a href='../post_delete.html?postid=".$postid."'>삭제</a></button>
+                ";
+              }
+
+             
+              echo"<div class='s-content__header col-full'>
+                <strong>제목:</strong><h1 class='s-content__header-title'>".$member['title']."</h1>-----------------------------------------<br>"
+                  .$member['content'].
+                  "<br>-----------------------------------------</div>";
+          ?>
+
+    </div>
+    </article>
+
+    <br><br><br><br>
+    <h3 style="text-align:center;">댓글</h3>
+    <input type="hidden" id="board_id" name="board_id" value="${boardView.id}" />
+    <div style="margin-left: 50px; margin-right: 50px;">
+      <table border="1" width="900px" id="reply_area" class="recomment">
+        <tr reply_type="all">
+          <!-- 뒤에 댓글 붙이기 쉽게 선언 -->
+          <td colspan="5"></td>
+        </tr>
+        <!-- 댓글이 들어갈 공간 -->
+      </table>
+      <table width="900px" bordercolor="#46AA46" class="comment">
+        <tr>
+          <td id="Tbox" width="500px">
+            이름: <input type="text" id="reply_writer" name="reply_writer" style="width:170px; background-color: #eee;"
+              maxlength="10" placeholder="작성자" />
+            패스워드: <input type="password" id="reply_password" name="reply_password"
+              style="width:170px; background-color: #eee;" maxlength="10" placeholder="패스워드" />
+            <textarea id="reply_content" name="reply_content" rows="4" cols="50" placeholder="댓글을 입력하세요."
+              style="background-color: #eee;"></textarea>
+            <button id="reply_save" name="reply_save" style="font-family: 'Noto Serif KR', serif">댓글 등록</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <br><br><br>
+
+
+  </section>
+  <!--s-content-->
+
+
+
+  <!-- s-footer
+        ================================================== -->
+  <footer class="s-footer">
+
+    <div class="s-footer__bottom">
+      <div class="row">
+        <div class="col-full">
+          <div class="s-footer__copyright">
+            <span>Contributor<br>
+              김률아 hobby0519@gmail.com<br>
+              김민겸 gms08184@gmail.com<br>
+              박준희 qaz74792@gmail.com<br>
+              심성현 sh010604@naver.com<br>
+              전명환 ab5502ghals@naver.com<br>
+              허미림 wowoo3545@gmail.com</span><br>
+            <span>© Copyright Hobby In House 2020</span>
+          </div>
+
+          <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end s-footer__bottom -->
+
+  </footer> <!-- end s-footer -->
+
+  <!-- Java Script
+        ================================================== -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="js/post.js"></script>
+
+</body>
+
+</html>
