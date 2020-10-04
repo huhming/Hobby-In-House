@@ -1,0 +1,15 @@
+<!-- 게시판 스크롤 내리면 바로 댓글보이게? -->
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title> Reply </title><br>
+  </head>
+  <body>
+    <form action = "./reply_write_ok.php" method = "post"> </form>
+      <!-- 텍스트박스 생성해서 댓글 달기 누르면 reply_write.php 문으로 이동하여서 db에 데이터 넣기 -->
+      <input type = "text" name = "content" value = "Please Enter your comment." size = 100 maxlength = 100><br>
+      <form action = "./reply_write.php" method = "post"> </form>
+      <input type="button" value="SUBMIT">
+</body>
+</html>
